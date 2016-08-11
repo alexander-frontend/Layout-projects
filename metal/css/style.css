@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSansRegular/PTSansRegular.eot");
+    src: url("../fonts/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansRegular.woff") format("woff"),
+    url("../fonts/PTSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 /*-------- reset css (begin) --------*/
 html,
 body,
