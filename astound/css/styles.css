@@ -446,11 +446,17 @@ body {
     height: 100%;
     width: 100%;
     position: relative; }
-  .wrapper_sale p {
-    position: absolute;
-    vertical-align: middle;
-    height: 100%;
-    width: 100%; }
+  .wrapper_sale .wrap {
+    position: relative;
+    display: table; }
+    .wrapper_sale .wrap div {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0; }
 
 .wrapper {
   min-width: 960px;
