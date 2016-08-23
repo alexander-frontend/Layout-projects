@@ -1,0 +1,89 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<title>Customers list</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/my-styles.css">
+</head>
+<body>
+	<div class="container" ng-controller="ListCustomers">
+
+		<div class="row">
+			<div class="page-header">
+				<div class="col-md-9">
+					<h1>Customers list</h1>
+				</div>
+        <!-- <div class="span3">
+          <input type="search" ng-model="search" placeholder="Buscar por...">
+        </div> -->
+      </div>
+    </div>
+
+    <div class="table-responsive">
+    	<table id="list-customers" class="table table-striped">
+    		<thead>
+    			<tr>
+    				<!-- <th>Comprado?</th> -->
+    				<th>Name</th>
+    				<th>Email</th>
+    				<th>Telephone</th>
+    				<th>Address</th>
+    				<th>Street</th>
+    				<th>City</th>
+    				<th>State</th>
+    				<th>Zip</th>
+    				<th></th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr ng-repeat="item in items" class="comprado-{{ item.comprado }}">
+    				<!-- <td><input type="checkbox" ng-model="item.comprado"></td> -->
+    				<td><strong>{{ item.name }}</strong></td>
+    				<td>{{ item.email }}</td>
+    				<td>{{ item.telephone }}</td>
+    				<td>{{ item.address }}</td>
+    				<td>{{ item.street }}</td>
+    				<td>{{ item.city }}</td>
+    				<td>{{ item.state }}</td>
+    				<td>{{ item.zip }}</td>
+    				<td>
+    					<button class="btn btn-warning btn-small my_but_p" ng-click="editarItem($index)">
+    						<i class="icon-pencil icon-white"></i> Редактировать
+    					</button>
+    					<button class="btn btn-danger btn-small" ng-click="deleteItem($index)">
+    						<i class="icon-trash icon-white"></i> Удалить
+    					</button>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+
+    <div class="row">
+    	<form class="form-inline" name="validarValoresPreenchidos">
+    		<div class="col-sm-12">
+    			<input type="text" class="form-control my_p" ng-model="item.name" placeholder="Name" required>
+    			<input type="text" class="form-control my_p" ng-model="item.email" placeholder="Email" required>
+    			<input type="text" class="form-control my_p" ng-model="item.telephone" placeholder="Telephone" required>
+    			<input type="text" class="form-control my_p" ng-model="item.address" placeholder="Address" required>
+    			<input type="text" class="form-control my_p" ng-model="item.street" placeholder="Street" required>
+    			<input type="text" class="form-control my_p" ng-model="item.city" placeholder="City" required>
+    			<input type="text" class="form-control my_p" ng-model="item.state" placeholder="State" required>
+    			<input type="text" class="form-control my_p" ng-model="item.zip" placeholder="Zip" required>
+    			<button ng-hide="edit" class="btn btn-success my_p" ng-disabled="validarValoresPreenchidos.$invalid" ng-click="adicionaItem()">
+    				<i class="icon-plus icon-white"></i> Добавить
+    			</button>
+    			<button ng-show="edit" class="btn btn-success my_p" ng-disabled="validarValoresPreenchidos.$invalid" ng-click="applyChanges()">
+    				<i class="icon-ok icon-white"></i> Готово
+    			</button>
+    		</form>
+    	</div>
+    </div>
+  </div>
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="app/controllers.js"></script>
+</body>
+</html>
