@@ -43,6 +43,26 @@
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
 	cursor: pointer;
+	font-size: 0;
+	width: 17px;
+	height: 27px;
+	background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.owl-buttons div.owl-prev {
+	position: absolute;
+	left: 19px;
+	top: 50%;
+	margin-top: -14px;
+	background-position: -5px -5px;
+}
+.owl-buttons div.owl-next {
+	position: absolute;
+	right: 19px;
+	top: 50%;
+	margin-top: -14px;
+  background-position: -32px -5px;
 }
 .owl-controls {
 	-webkit-user-select: none;
