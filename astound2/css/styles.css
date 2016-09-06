@@ -583,11 +583,11 @@ body {
     outline: none;
     padding-left: 8px;
     font-size: 15px;
-    background: transparent
     letter-spacing: 1.5px;
     line-height: 40px;
     appearance: none !important;
-    -ms-appearance: none; }
+    -ms-appearance: none; 
+  	background: transparent}
     .product-cart_size select::-ms-expand {
       display: none; }
 
@@ -607,12 +607,12 @@ body {
     outline: none;
     height: 41px;
     padding-left: 8px;
-    background: transparent
     font-size: 15px;
     border: 1px solid #969696;
     line-height: 40px;
     appearance: none !important;
-    -ms-appearance: none; }
+    -ms-appearance: none; 
+  	background: transparent}
     .product-cart_quantity select::-ms-expand {
       display: none; }
 
