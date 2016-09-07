@@ -520,7 +520,7 @@ body {
   float: right; }
 
 .product-cart_form {
-  padding-bottom: 30px;
+  padding-bottom: 31px;
   border-bottom: 1px solid #e3e5e7; }
 
 .product-cart_submit {
@@ -672,11 +672,19 @@ body {
   .product-description ul {
     padding: 0;
     margin: 0;
-    list-style: none; }
+    list-style: none;
+    display: block; }
+    @media (min-width: 1024px) {
+      .product-description ul {
+        display: block !important; } }
+    @media (max-width: 1023px) {
+      .product-description ul {
+        display: none; } }
     .product-description ul li {
       font-size: 15px;
       padding-left: 10px;
-      position: relative; }
+      position: relative;
+      color: #1a1a1a; }
       .product-description ul li:before {
         content: '';
         position: absolute;
@@ -894,9 +902,7 @@ body {
   .product-imgs {
     margin-bottom: 53px; }
   .list-click {
-    display: block; }
-  .product-description ul {
-    display: none; } }
+    display: block; } }
 
 @media all and (max-width: 767px) {
   .product-inner {
@@ -959,7 +965,7 @@ body {
   .list-click {
     display: none; }
   .product-description ul {
-    display: block; } }
+    display: block !important; } }
 
 /* 
  * 	Core Owl Carousel CSS File
