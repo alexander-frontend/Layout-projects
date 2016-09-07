@@ -472,20 +472,11 @@ body {
 .sprite-read-more {
   width: 13px;
   height: 8px;
-  background-position: -112px -5px; }
+  background-position: -5px -91px;
+  position: absolute;
+  right: 0;
+  bottom: 5px; }
 
-/* .wrapper_sale
-	width: 100%
-	height: 100%
-	display: none
-
-	@media all and (max-width: 720px)
-		display: block
-
-	img
-		height: 100%
-		width: 100%
-		position: relative */
 .wrapper {
   min-width: 100%;
   min-height: 100%;
@@ -803,6 +794,31 @@ body {
 .owl-pagination {
   display: none !important; }
 
+.open-list {
+  display: block !important; }
+
+.list-click {
+  display: none;
+  color: #191919;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 98px;
+  position: relative;
+  letter-spacing: 0;
+  padding-top: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  position: relative;
+  margin-top: 27px;
+  margin-bottom: 15px; }
+  .list-click:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 0;
+    background: #191919; }
+
 @media all and (max-width: 1023px) {
   .product-inner {
     padding-top: 26px; }
@@ -876,7 +892,11 @@ body {
     .product-imgs_hover_block a {
       width: 134px; }
   .product-imgs {
-    margin-bottom: 53px; } }
+    margin-bottom: 53px; }
+  .list-click {
+    display: block; }
+  .product-description ul {
+    display: none; } }
 
 @media all and (max-width: 767px) {
   .product-inner {
@@ -935,4 +955,100 @@ body {
   .product-imgs_wrapper {
     display: none; }
   .product-inner {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .list-click {
+    display: none; }
+  .product-description ul {
+    display: block; } }
+
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+	font-size: 0;
+	width: 17px;
+	height: 27px;
+	background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.owl-buttons div.owl-prev {
+	position: absolute;
+	left: 19px;
+	top: 50%;
+	margin-top: -14px;
+	background-position: -5px -5px;
+}
+.owl-buttons div.owl-next {
+	position: absolute;
+	right: 19px;
+	top: 50%;
+	margin-top: -14px;
+  background-position: -32px -5px;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
